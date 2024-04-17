@@ -6,8 +6,8 @@ services:
     container_name: nestjs_api
     environment:
       - PORT=3000
-      - JWT_SECRECT=123
-      - MONGO_URI=mongodb://mongo_db:267017/BlogApp
+      - JWT_SECRET=123
+      - MONGO_URI=mongodb+srv://giadinhthai:Ngpro123@cluster0.gtocs.mongodb.net/365truck
     ports:
       - '3000:3000'
     depends_on:
@@ -15,8 +15,8 @@ services:
     networks:
       - nestjs_network
   
-database:
-    image: mongodb
+  database:
+    image: mongo
     container_name: mongo_db    
     ports:
       - '27017:27017'
