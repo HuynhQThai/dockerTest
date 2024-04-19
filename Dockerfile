@@ -17,5 +17,5 @@ COPY --from=build /usr/src/app/dist ./dist
 COPY package*.json ./
 RUN npm install --only=production
 RUN rm package*.json
-EXPOSE 80
+EXPOSE 3000
 CMD [ "node", "dist/main.js"]
